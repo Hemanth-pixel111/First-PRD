@@ -70,7 +70,10 @@ public class Main {
         System.out.println("------------------------------------------------");
 
         // Condition Checking Order (Section 12 & 13)
-        if (!degreeEligible) {
+        if (applicationEligible) {
+            System.out.println("Application Status      : Eligible to Apply");
+            System.out.println("Next Action             : Submit the company application");
+        } else if (!degreeEligible) {
             System.out.println("Application Status      : Not Eligible");
             System.out.println("Next Action             : Improve degree percentage");
         } else if (!backlogEligible) {
@@ -94,9 +97,6 @@ public class Main {
         } else if (!profileEligible) {
             System.out.println("Application Status      : Application On Hold");
             System.out.println("Next Action             : Complete profile verification");
-        } else {
-            System.out.println("Application Status      : Eligible to Apply");
-            System.out.println("Next Action             : Submit the company application");
         }
 
         System.out.println("================================================");
